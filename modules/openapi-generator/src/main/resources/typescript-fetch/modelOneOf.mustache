@@ -1,13 +1,12 @@
 {{#hasImports}}
+{{#imports}}
 import {
-    {{#imports}}
     {{{.}}},
-    {{/imports}}
-    {{#oneOf}}
-    {{{.}}}FromJSONTyped,
-    {{{.}}}ToJSON,
-    {{/oneOf}}
-} from './';
+    {{.}}FromJSON,
+    {{.}}FromJSONTyped,
+    {{.}}ToJSON,
+} from './{{.}}';
+{{/imports}}
 
 {{/hasImports}}
 {{>modelOneOfInterfaces}}
